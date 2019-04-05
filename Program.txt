@@ -1,0 +1,51 @@
+import java.io.*;
+class Program
+{
+int i;
+Program(int a)
+{
+i=a;
+}
+void checknumber()
+{
+if(i>0)
+{
+System.out.println("number is positive");
+}
+else
+{ 
+System.out.println("number is negative");
+}
+}
+
+
+void prime()
+{
+int x,factor=0;
+	
+	for(x=1,factor=0;x<=i/2;x++)
+	{
+		if(x%i==0)
+		{
+			factor++;
+		}
+	}
+	if(factor==2)
+	{
+		System.out.println("prime number");
+	}
+	else{
+		System.out.println("not prime number");
+	}
+}
+};
+
+class assignment1
+{
+public static void main(String[] args)
+{
+Program P1=new Program(2);
+P1.checknumber();
+P1.prime();
+}
+}
