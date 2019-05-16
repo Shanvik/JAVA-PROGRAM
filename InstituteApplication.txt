@@ -1,0 +1,29 @@
+
+import java.util.Map;
+
+
+
+public class InstituteApplication {
+
+	public static void main(String[] args) {
+		
+		List<Institute> institutes = new ArrayList<>();
+		institues.add(new Institute("A", 46000, 2, 15, 500));
+		institutes.add(new Institute("B", 25000, 1, 15, 100));
+		institutes.add(new Institute("C", 38000, 4, 20, 1500));
+
+		
+		Map<String , Integer> costParams = new HashMap();
+		costParams.put(Keys.TOTAL_WORKING_DAYS.toString(),20);
+		costParams.put(Keys.DISTANCE_COST.toString(),10);
+		costParams.put(Keys.TRAVEL_COST.toString(),5);
+		
+		calculateTotalCost(institutes , costParams)
+		
+		institutes.forEach(f -> {
+			System.out.println(i.getName() + "\t" + i.getTotalCost());
+		});
+
+	}
+
+}
