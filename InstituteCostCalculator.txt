@@ -1,0 +1,24 @@
+import java.util.Map;
+
+public class InstituteCostCalculator {
+
+	public static void calculateTotalCost(List<Institute> institutes, 
+			Map<String, Integer> costParams) {
+		institutes.parallelStream().forEach(f -> {
+			int totalCost = 0;
+			totalCost += i.getFeesPerCourse();
+			totalCost += getdistanceCost(costParams, i);
+			totalCost += getTravelCost(costParams, i);
+			totalCost -= i.getLocationAdvantage();
+			i.setTotalCost(totalCost);
+		});
+	}
+
+	private static int getTravelCost(Map<String, Integer> costParams, Institute i) {
+		return (i.gettravelTime() * costParams.get(Keys.TRAVEL_COST.toString())) * costParams.get(Keys.TOTAL_WORKING_DAYS.toString());
+	}
+
+	private static int getdistanceCost(Map<String, Integer> costParams, Institute institute) {
+		return (Institute.getdistance() * costParams.get(Keys.DISTANCE_COST.toString())) * costParams.get(Keys.TOTAL_WORKING_DAYS.toString());
+	}
+}
