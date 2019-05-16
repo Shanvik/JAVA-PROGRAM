@@ -1,0 +1,80 @@
+
+public class Institute {
+	private String name;
+	private int FeesPerCourse;
+	private static int distance;
+	private int travelTime;
+	private int locationAdvantage;
+	private int TotalCost;
+	
+	public Institute(String name , int FeesPerCourse, int distance , int travelTime , int locationAdvantage)
+	{     
+	super();
+			this.name = name;
+			this.FeesPerCourse = FeesPerCourse;
+			this.distance = distance;
+			this.travelTime = travelTime;
+			this.locationAdvantage = locationAdvantage;
+}
+	
+	public int getTotalCost()
+	{
+		return TotalCost;
+	}
+	
+	public void setTotalCost(int TotalCost)
+	{
+		this.TotalCost = TotalCost;
+	}
+	
+	public String getname()
+	{
+		return name;
+	}
+	
+	public void setname(string name)
+	{
+		this.name = name;
+	}
+	
+	public int getFeesPerCourse()
+	{
+		return FeesPerCourse;
+	}
+	
+	public void setFeesPerCourse(int FeesPerCourse)
+	{
+		this.FeesPerCourse = FeesPerCourse;
+	}
+	
+	public static int getdistance()
+	{
+		return distance;
+	}
+	
+	public void setdistance(int distance)
+	{
+		this.distance = distance;
+	}
+	
+	public int gettravelTime()
+	{
+		return travelTime;
+	}
+	
+	public void settravelTime(int travelTime)
+	{
+		this.travelTime = travelTime;
+	}
+	
+	public int getlocationAdvantage()
+	{
+		return locationAdvantage;
+	}
+	
+	public void setloctionAdvantage(int locationAdvantage)
+	{
+		this.locationAdvantage = locationAdvantage;
+	}
+}
+ 
